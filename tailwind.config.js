@@ -1,12 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const { fontFamily } = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin');
-/* eslint-enable import/no-extraneous-dependencies */
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -19,7 +16,6 @@ module.exports = {
       },
     },
   },
-  variants: {},
   plugins: [
     plugin(({ addComponents, theme }) => {
       const progress = {

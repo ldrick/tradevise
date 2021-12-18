@@ -28,7 +28,7 @@ const Layout = (props: LayoutProps) => {
             height: 100%;
             width: 100%;
           }
-          ,
+
           html {
             scroll-behavior: smooth;
           }
