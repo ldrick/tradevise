@@ -11,10 +11,10 @@ interface Array<T> {
    * @return {T | undefined} Element in the array matching the given index.
    * Returns `undefined` if the given index can not be found
    */
-  at(index: number): T | undefined
+  at(index: number): T | undefined;
 }
 
 /** @template T - Array item type */
 interface ReadonlyArray<T> {
-  at: Array<T>['at']
+  at: Array<T>['at'];
 }

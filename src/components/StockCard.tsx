@@ -38,18 +38,6 @@ const StockCard = (props: StockCardProps) => {
           { key: '6months', title: '6 Months' },
         ]}
         rows={data?.t
-          .filter((date, index) => {
-            if (index === 0) {
-              const actualDate = new Date(date);
-              const lastDayOfMonth = new Date(
-                actualDate.getFullYear(),
-                actualDate.getMonth() + 1,
-                0,
-              );
-              return lastDayOfMonth.getDate() * 0.9 <= actualDate.getDate();
-            }
-            return true;
-          })
           .filter((_date, index) => index < (period || 6))
           .map((date, index) => ({
             key: date,
